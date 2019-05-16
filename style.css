@@ -35,7 +35,7 @@ p,
 a,
 ul,
 h1,
-h3 {
+h4 {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -56,6 +56,9 @@ header {
   display: flex;
   align-items: center;
   padding: 13px 0;
+}
+.header__wrapper a {
+  color: #000000;
 }
 .logo {
   text-align: center;
@@ -240,6 +243,10 @@ header {
 footer {
   color: #ffffff;
 }
+footer .footer-top {
+  background-color: #3f3f3f;
+  font-size: 12px;
+}
 .footer-top__wrapper {
   width: 1170px;
   margin: 0 auto;
@@ -249,14 +256,46 @@ footer {
   text-decoration: none;
   color: #fff;
 }
+.footer-top__wrapper a:hover {
+  color: #ffbc21;
+}
 .footer-top__wrapper li {
   list-style: none;
+  margin-bottom: 18px;
 }
-.footer-top__wrapper h3 {
+.footer-top__wrapper h4 {
+  padding-bottom: 28px;
+  font-size: 18px;
+  font-family: 'Gotham Pro Regular', sans-serif;
+}
+.footer__map-columns {
+  display: flex;
+}
+.footer__ul-one {
+  width: 100px;
+  margin-right: 70px;
+}
+.footer__ul-two {
+  width: 145px;
+  margin-right: 116px;
+}
+.contact {
+  width: 225px;
+  margin-right: 80px;
+}
+.facebook,
+.instagram,
+.youtube {
+  width: 160px;
+}
+.facebook p,
+.instagram p,
+.youtube p {
+  font-size: 14px;
   padding-bottom: 28px;
 }
-.footer-top {
-  background-color: #3f3f3f;
+.list-social {
+  margin-right: 50px;
 }
 .footer-bottom {
   background-color: #333333;

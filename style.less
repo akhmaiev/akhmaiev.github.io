@@ -43,12 +43,11 @@ body{
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-p, a, ul, h1, h3{
+p, a, ul, h1, h4{
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
-
 }
 h1{
   padding: 100px 0 63px 0;
@@ -57,6 +56,7 @@ h1{
 
 //header
 header{
+
   background: #ffffff;
   height: 120px;
   font-size: 14px;
@@ -67,6 +67,9 @@ header{
   display: flex;
   align-items: center;
   padding: 13px 0;
+  a{
+    color: #000000;
+  }
 
 }
 .logo{
@@ -189,7 +192,7 @@ header{
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 5px;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,7 +287,10 @@ header{
 //footer
  footer{
   color: #ffffff;
-
+   .footer-top{
+     background-color: #3f3f3f;
+     font-size: 12px;
+   }
 }
 .footer-top__wrapper{
   .center;
@@ -293,17 +299,50 @@ header{
     text-decoration: none;
     color: #fff;
   }
+  a:hover{
+    color:#ffbc21;
+  }
   li{
     list-style: none;
+    margin-bottom: 18px;
   }
-  h3{
+  h4{
+    padding-bottom: 28px;
+    font-size: 18px;
+    font-family: 'Gotham Pro Regular', sans-serif;
+  }
+}
+
+.footer__map-columns{
+  display: flex;
+
+}
+.footer__ul-one{
+  width: 100px;
+  margin-right: 70px;
+}
+.footer__ul-two{
+  width: 145px;
+  margin-right: 116px;
+}
+.contact{
+  width: 225px;
+  margin-right: 80px;
+}
+.facebook,
+.instagram,
+.youtube{
+  width: 160px;
+  p{
+    font-size: 14px;
     padding-bottom: 28px;
   }
 }
-.footer-top{
-   background-color: #3f3f3f;
+.list-social{
+  margin-right: 50px;
+}
 
- }
+
 .footer-bottom{
   background-color: #333333;
 }
@@ -311,7 +350,6 @@ header{
   .center;
   color: #ffffff;
 }
-//footer
 
 .footer-top__main{
   display: flex;
