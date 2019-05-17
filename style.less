@@ -78,16 +78,35 @@ header{
   margin-right: 117px;
 }
 .header__menu {
-  margin-right: 140px;
+  margin-right: 120px;
   width: 590px;
   font-weight: bold;
   li{
     display: inline;
     margin-right: 55px;
   }
+  li:hover{
+    padding-bottom: 10px;
+    border-bottom: solid 3px #60c659;
+  }
 }
 .header__tell{
+  display: flex;
+  flex-direction: column;
   width: 222px;
+  a{
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px;
+  }
+  img{
+    margin-right: 6px;
+  }
+}
+.header__bold{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 
@@ -102,13 +121,16 @@ header{
 }
 .top-slider__wrapper{
   .center;
+  display: flex;
+  flex-direction: column;
   height: 480px;
+  position: relative;
     p{
       font-weight: bold;
 
       color: #ffffff;
     }
-    a{
+  .top-slider__button{
       width: 270px;
       height: 48px;
       text-transform: uppercase;
@@ -121,41 +143,62 @@ header{
       align-items: center;
       justify-content: center;
 
-
-      //padding: 18px 50px 13px 50px;
       border-radius: 5px;
-      //margin-left: 25px;
     }
-
+  .top-slider__button:hover{
+    background-color: #ffbc21;
+    color: #ffffff;
+  }
 }
+.top-slider__prew{
+  position: absolute;
+  top: 50%;
+  left: -72px;
+}
+.top-slider__next{
+  position: absolute;
+  top: 50%;
+  right: -72px;
+}
+
 .top-slider__size-1{
   font-size: 48px;
   padding-top: 120px;
   line-height: 0.5;
-  margin-left: 50px;
+  margin-left: 40px;
+}
+.top-slider__size-1::after {
+  content: "";
+  position: absolute;
+  top: 124px;
+  left: 0px;
+
+  width: 10px;
+  height: 125px;
+  background-color: #ffffff;
 }
 .top-slider__size-2{
   font-size: 120px;
   text-transform: uppercase;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
   line-height: 1.1;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 .top-slider__offer{
   font-size: 18px;
-  font-family: Gotham Pro Medium, sans-serif;
-  margin-left: 0;
+  font-family: "Gotham Pro Medium", sans-serif;
+  margin-top: 74px;
   width: 235px;
-  height: 41px;
+  height: 43px;
   background: #60c659;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
-  border-radius: 5px;
-  margin-top: 58px;
-}
+ }
 
 
 //form
@@ -168,13 +211,18 @@ header{
   justify-content: center;
   align-items: center;
   height: 75px;
+  position: relative;
 }
 .form__input{
+
+  padding-left: 50px;
+  font-size: 14px;
   height: 55px;
   border-radius: 5px;
   margin-right: 9px;
   border: none;
 }
+
 .form__one{
   width: 480px;
   height: 55px;
@@ -188,7 +236,9 @@ header{
 .form__button{
   width: 162px;
   height: 55px;
-  background: #fe952e;
+
+  font-weight: bold;
+  background: linear-gradient(to right, #ff7f1e, #ffbc21);
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 5px;
@@ -196,6 +246,27 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover{
+    background: linear-gradient(to right, #ffbc21, #ff7f1e);
+  }
+  &:active{
+    background: #3f3f3f;
+  }
+}
+.form__img1{
+  position: absolute;
+  left: 20px;
+
+}
+.form__img2{
+  position: absolute;
+  left: 490px;
+
+}
+.form__img3{
+  position: absolute;
+  left: 720px;
+
 }
 
 
@@ -292,6 +363,9 @@ header{
      font-size: 12px;
    }
 }
+.footer-top__main{
+   display: flex;
+ }
 .footer-top__wrapper{
   .center;
   padding-top: 40px;
@@ -326,22 +400,59 @@ header{
   margin-right: 116px;
 }
 .contact{
-  width: 225px;
-  margin-right: 80px;
+  width: 300px;
+
 }
 .facebook,
 .instagram,
 .youtube{
-  width: 160px;
+  width: 190px;
+  margin-left: 50px;
   p{
     font-size: 14px;
     padding-bottom: 28px;
   }
 }
 .list-social{
-  margin-right: 50px;
-}
 
+  img{
+    margin-right: 9px;
+  }
+}
+.footer-top__form{
+  display: flex;
+  padding-bottom: 40px;
+  input{
+
+    height: 28px;
+    width: 200px;
+    background-color: #3f3f3f;
+    color: #ffffff;
+    border: none;
+    border-bottom: solid 2px;
+
+    margin-right: 20px;
+    padding: 0;
+  }
+  input::-webkit-input-placeholder{
+    color: #ffffff;
+  }
+  a{
+    width: 140px;
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #00a3dd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+  }
+}
 
 .footer-bottom{
   background-color: #333333;
@@ -349,8 +460,15 @@ header{
 .footer-bottom__wrapper{
   .center;
   color: #ffffff;
-}
+  p{
 
-.footer-top__main{
-  display: flex;
+    padding: 20px 0 20px;
+  }
 }
+.up{
+  position: fixed;
+  top: 80%;
+  right: .01%;
+  box-shadow: #3f3f3f;
+  }
+
